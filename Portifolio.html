@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Intro Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="email-info">tabitacostagc@gmail.com</div>
+      <div class="nav-buttons">
+        <button id="eventosBtn">Vem por aí</button>
+        <button id="coisasBtn">Projetos</button>
+        <button id="sobreBtn">Sobre mim</button>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="text-section">
+        <h1>Tabita Costa</h1>
+        <h4>Dev. Junior</h4>
+        <br>
+        <p>Apaixonada por programação, filmes de terror, fantasia e claro café ☕!! Sempre buscando me desenvolver profissionalmente
+          e estar ativa na comunidade de TI da região, estando presente na organização do Tech Hub, CodeXperience e no apoio ao DevOpsDaysJF (e se não conhecer o @techhubjf trata de ir lá e seguir o perfil pra ficar por dentro de tudo). E da pra notar que gosto mais do back-end né kkkk</p>
+        <div class="social-icons">
+          <a href="https://github.com/TabitaCosta" target="_blank"><img src="github.png" alt="GitHub"></a>
+          <a href="https://www.linkedin.com/in/tabitacosta" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
+          <a href="https://www.instagram.com/tabitacostagc/" target="_blank"><img src="instagram.png" alt="LinkedIn"></a>
+        </div>
+      </div>
+
+      <div class="image-section">
+        <img src="eu.png" alt="Tabita">
+      </div>
+    </div>
+  </div>
+
+  <div id="eventosModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeEventos">&times;</span>
+      <h2>Eventos</h2>
+      <ul>
+        <li>Tech Hub(em breve) </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Modal de Coisas -->
+  <div id="coisasModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeCoisas">&times;</span>
+      <!-- <h2>Projetos:</h2> -->
+      <ul>
+        <a href="https://qrcode-mocha-seven.vercel.app/" target="_blank"><li>Gerador de QrCode</li></a>
+        <a href="https://gerador-senha-seven.vercel.app/" target="_blank"><li>Gerador de Senhas Aleatorias</li></a>
+        <a href="https://tarefas-puce-iota.vercel.app/" target="_blank"><li>Lista de Tarefas</li></a>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Modal de Sobre Mim -->
+  <div id="sobreModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeSobre">&times;</span>
+      <h2>Sobre mim</h2>
+
+      <p>🌐 Apaixonada por transformar linhas de código em soluções inovadoras e eficientes!
+
+        Sou desenvolvedora back-end júnior, com experiência em PHP, SQL, CSS, HTML, Git, Laravel,
+        Bootstrap e Angular. Minha jornada também inclui uma forte base em gestão comercial, desenvolvimento
+        de sistemas e gestão de TI, o que me permite integrar a tecnologia com a estratégia de negócios de
+        forma eficaz. Sempre em busca de novos desafios e aprendizado, estou começando a explorar o submundo
+        do Java, com a ambição de expandir ainda mais meu conhecimento e habilidades no universo da programação.</p>
+
+        <br>
+
+        <h4>Formação</h4>
+        <li>🎓 Gestão Comercial</li>
+        <li>🎓 Desenvolvimento de Sistemas</li>
+        <li>📚 Gestão da TI</li>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
