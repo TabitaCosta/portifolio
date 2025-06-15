@@ -10,8 +10,30 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #f8f9fa;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(74, 47, 92, 1) 55%, rgba(0, 0, 0, 1) 100%);
   padding: 1rem;
+}
+
+.card-img-top-e {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.h-100 {
+  border: none;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+
+#dynamicContent {
+  min-height: 340px;
+  transition: all 0.3s ease;
+  width: 100%;
 }
 
 .container {
@@ -57,6 +79,29 @@ body {
   background-color: #e6e6e6;
 }
 
+.nav {
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cor-nav {
+  color: #4A2F5C;
+}
+
+.sub-titulo {
+  color: #4A2F5C;
+}
+
+.nav-link {
+  cursor: pointer;
+}
+
+.nav .nav-link.active {
+  background-color: #4A2F5C;
+  color: white !important;
+  border-radius: 50px;
+}
+
 .content {
   display: flex;
   align-items: center;
@@ -66,8 +111,14 @@ body {
 }
 
 .text-section {
-  max-width: 100%;
   flex: 1;
+  min-width: 250px;
+}
+
+.image-section img {
+  max-width: 200px;
+  border-radius: 16%;
+  height: auto;
 }
 
 .social-icons {
@@ -100,12 +151,7 @@ body {
   background-color: #e04a4a;
 }
 
-.image-section img {
-  max-width: 100%;
-  max-width: 200px;
-  border-radius: 50%;
-}
-
+/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -158,39 +204,88 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
+.espaco-geral {
+  padding: 30px;
+}
+
+.stack-icon {
+  width: 40px;
+  height: 40px;
+  /* filter: grayscale(1); */
+  transition: filter 0.3s;
+}
+
+.stack-icon:hover {
+  filter: grayscale(0);
+}
+
+.titulo-icone {
+  font-size: 5px;
+}
+
+.card-img-top {
+  height: 120px;
+  object-fit: contain;
+}
+
+/* Responsivo - Tablets */
 @media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+
   .content {
     flex-direction: column;
     text-align: center;
   }
 
   .text-section {
-    max-width: 100%;
-  }
-
-  .nav-buttons {
-    justify-content: center;
+    width: 100%;
   }
 
   .image-section {
     margin-top: 1rem;
+    text-align: center;
+  }
+
+  .nav {
+    justify-content: center;
   }
 }
 
+/* Responsivo - Celulares */
 @media (max-width: 480px) {
   .header {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .nav-buttons {
-    width: 100%;
-    justify-content: space-evenly;
+  .email-info {
+    margin-bottom: 1rem;
+  }
+
+  .nav {
+    justify-content: center;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+  }
+
+  .nav-link {
+    padding: 0.3rem 0.8rem;
   }
 
   .modal-content {
     padding: 1rem;
+  }
+
+  .cta-button button {
+    width: 100%;
+  }
+
+  .image-section img {
+    max-width: 150px;
   }
 }
