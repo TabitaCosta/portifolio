@@ -1,46 +1,16 @@
-const eventosModal = document.getElementById("eventosModal");
-const coisasModal = document.getElementById("coisasModal");
-const sobreModal = document.getElementById("sobreModal");
+document.querySelectorAll('[data-section]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const section = e.target.getAttribute('data-section');
 
-const eventosBtn = document.getElementById("eventosBtn");
-const coisasBtn = document.getElementById("coisasBtn");
-const sobreBtn = document.getElementById("sobreBtn");
+    // Remove 'active' de todos os links
+    document.querySelectorAll('[data-section]').forEach(l => l.classList.remove('active'));
+    e.target.classList.add('active');
 
-const closeEventos = document.getElementById("closeEventos");
-const closeCoisas = document.getElementById("closeCoisas");
-const closeSobre = document.getElementById("closeSobre");
+    // Esconde todas as seções
+    document.querySelectorAll('.section').forEach(sec => sec.classList.add('d-none'));
 
-eventosBtn.onclick = function() {
-  eventosModal.style.display = "block";
-}
-
-coisasBtn.onclick = function() {
-  coisasModal.style.display = "block";
-}
-
-sobreBtn.onclick = function() {
-  sobreModal.style.display = "block";
-}
-
-closeEventos.onclick = function() {
-  eventosModal.style.display = "none";
-}
-
-closeCoisas.onclick = function() {
-  coisasModal.style.display = "none";
-}
-
-closeSobre.onclick = function() {
-  sobreModal.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == eventosModal) {
-    eventosModal.style.display = "none";
-  } else if (event.target == coisasModal) {
-    coisasModal.style.display = "none";
-  } else if (event.target == sobreModal) {
-    sobreModal.style.display = "none";
-  }
-}
-
+    // Mostra a seção correspondente
+    document.getElementById('section-' + section).classList.remove('d-none');
+  });
+});
