@@ -22,13 +22,13 @@
     <li class="nav-item">
       <a class="nav-link cor-nav" data-section="projetos" href="#">Projetos</a>
     </li>
-    <li class="nav-item">
+    <!-- <li class="nav-item">
       <a class="nav-link cor-nav" data-section="sobre" href="#">Sobre Mim</a>
-    </li>
+    </li> -->
   </ul>
   <div class="container">
 
-    <div id="dynamicContent">
+    <div id="dynamicContent" class="dynamicContent">
       <div class="section" id="section-home">
         <div class="content">
           <div class="image-section">
@@ -80,7 +80,9 @@
                   <div class="slide-eventos">
                     <div class="texto-slide">
                       <h6>Code Experience</h6>
-                      <p>testetststststsgcvhxcvhxvhdvs</p>
+                      <p>Evento anual para profissionais de tecnologia, com foco em atualização, desenvolvimento de
+                        habilidades e networking. Reúne especialistas em palestras, workshops e encontros com a
+                        comunidade de TI. </p>
                     </div>
                     <img src="codexperience.jpg" class=" img-slide" alt="CodeXperience">
                   </div>
@@ -93,10 +95,31 @@
                 <div class="col-md-8">
                   <div class="slide-eventos">
                     <div class="texto-slide">
-                      <h6>Code Experience</h6>
-                      <p>testetststststsgcvhxcvhxvhdvs</p>
+                      <h6>DevOpsDaysJF</h6>
+                      <p>O DevOpsDays Juiz de Fora é voltado para profissionais de desenvolvimento
+                        (Dev) e operações (Ops), o evento tem como foco a cultura DevOps e suas práticas, promovendo a
+                        colaboração entre equipes, a automação de processos e a melhoria contínua na entrega de
+                        software.
+                      </p>
                     </div>
-                    <img src="codexperience.jpg" class=" img-slide" alt="CodeXperience">
+                    <img src="devops.jpg" class=" img-slide" alt="CodeXperience">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-md-8">
+                  <div class="slide-eventos">
+                    <div class="texto-slide">
+                      <h6>Tech Hub Conf</h6>
+                      <p>O Tech Hub Conf é um evento para devs e profissionais de TI, com foco em troca de conhecimento
+                        e aprimoramento técnico, trazendo palestras, workshops, ignite talks e open spaces com
+                        especialistas.
+                      </p>
+                    </div>
+                    <img src="techhub.jpg" class=" img-slide" alt="CodeXperience">
                   </div>
                 </div>
               </div>
@@ -117,56 +140,90 @@
 
 
       <div class="section d-none espaco-geral" id="section-projetos">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-          <div class="col">
-            <div class="card h-100 text-center">
-              <img src="qr-code.png" class="card-img-top p-4" alt="QR Code Generator">
-              <div class="card-body">
-                <h5 class="card-title">QR Code Generator</h5>
-                <a href="https://qrcode-mocha-seven.vercel.app/" target="_blank" class="btn btn-dark">Acessar</a>
+        <div id="carouselEventos" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="row justify-content-center">
+                <div class="col-md-8">
+                  <div class="slide-eventos d-flex flex-column flex-md-row align-items-center gap-4">
+                    <div class="texto-slide">
+                      <h5 class="card-title">QR Code Generator</h5>
+                      <p>Gere códigos QR personalizados de forma rápida e fácil para compartilhar links, textos e muito
+                        mais.</p>
+                      <a href="https://qrcode-mocha-seven.vercel.app/" target="_blank" class="btn btn-dark">Acessar</a>
+                    </div>
+                    <img src="pageqr.png" class="img-fluid" alt="QR Code Generator" style="max-width: 400px;">
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="card h-100 text-center">
-              <img src="security-lock.png" class="card-img-top p-4" alt="Gerador de Senhas">
-              <div class="card-body">
-                <h5 class="card-title">Gerador de Senhas</h5>
-                <a href="https://gerador-senha-seven.vercel.app/" target="_blank" class="btn btn-dark">Acessar</a>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-md-8">
+                  <div class="slide-eventos d-flex flex-column flex-md-row align-items-center gap-4">
+                    <div class="texto-slide">
+                      <h5 class="card-title">Lista de Tarefas</h5>
+                      <p>Organize sua rotina e aumente sua produtividade com uma lista de tarefas prática e intuitiva.
+                      </p>
+                      <a href="https://tarefas-puce-iota.vercel.app/" target="_blank" class="btn btn-dark">Acessar</a>
+                    </div>
+                    <img src="task-list.png" class="img-fluid" alt="Lista de Tarefas" style="max-width: 400px;">
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="card h-100 text-center">
-              <img src="clipboard.png" class="card-img-top p-4" alt="Lista de Tarefas">
-              <div class="card-body">
-                <h5 class="card-title">Lista de Tarefas</h5>
-                <a href="https://tarefas-puce-iota.vercel.app/" target="_blank" class="btn btn-dark">Acessar</a>
+
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-md-8">
+                  <div class="slide-eventos d-flex flex-column flex-md-row align-items-center gap-4">
+                    <div class="texto-slide">
+                      <h5 class="card-title">Página de Vendas Online</h5>
+                      <p>Landing page moderna e responsiva para impulsionar vendas e apresentar produtos com impacto.
+                      </p>
+                      <a href="https://pagina-de-vendas-drab.vercel.app/" target="_blank"
+                        class="btn btn-dark">Acessar</a>
+                    </div>
+                    <img src="pagevendas.png" class="img-fluid" alt="Página de Vendas Online" style="max-width: 400px;">
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="card h-100 text-center">
-              <img src="venda-online.png" class="card-img-top p-4" alt="Lista de Tarefas">
-              <div class="card-body">
-                <h5 class="card-title">Pagina de Vendas Online</h5>
-                <a href="https://pagina-de-vendas-drab.vercel.app/" target="_blank" class="btn btn-dark">Acessar</a>
+
+            <!-- Slide 5 -->
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-md-8">
+                  <div class="slide-eventos d-flex flex-column flex-md-row align-items-center gap-4">
+                    <div class="texto-slide">
+                      <h5 class="card-title">Tempo na Web</h5>
+                      <p>Consulte a previsão do tempo da sua cidade com uma interface bonita e objetiva.</p>
+                      <a href="https://tempo-na-web.vercel.app/" target="_blank" class="btn btn-dark">Acessar</a>
+                    </div>
+                    <img src="temperatura.png" class="img-fluid" alt="Tempo na Web" style="max-width: 400px;">
+                  </div>
+                </div>
               </div>
             </div>
+
           </div>
-          <div class="col">
-            <div class="card h-100 text-center">
-              <img src="chuva.png" class="card-img-top p-4" alt="Lista de Tarefas">
-              <div class="card-body">
-                <h5 class="card-title">Tempo na Web</h5>
-                <a href="https://tempo-na-web.vercel.app/" target="_blank" class="btn btn-dark">Acessar</a>
-              </div>
-            </div>
-          </div>
+
+          <!-- Botões de navegação -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselEventos" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselEventos" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+          </button>
         </div>
       </div>
-
-
 
       <script src="script.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"

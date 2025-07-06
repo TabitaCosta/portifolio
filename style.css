@@ -22,7 +22,14 @@ h1 {
   font-weight: 200;
 }
 
-/* Deixa o conteúdo centralizado vertical e horizontalmente */
+h6 {
+  color: #8d769b;
+}
+
+.btn {
+  background-color: #8d769ba9;
+}
+
 .slide-eventos {
   display: flex;
   flex-direction: row;
@@ -33,12 +40,16 @@ h1 {
   gap: 15px;
 }
 
-/* Texto centralizado com espaçamento */
 .texto-slide {
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
-/* Imagem responsiva e centralizada */
+.dynamicContent {
+  padding-top: 20px;
+}
+
 .img-slide {
   max-width: 50%;
   height: auto;
@@ -46,28 +57,8 @@ h1 {
   object-fit: cover;
 }
 
-/* Garante que o carrossel tenha altura mínima agradável */
 .carousel-item {
   padding: 40px 0;
-}
-
-/* Centraliza o conteúdo em todas as telas */
-@media (min-width: 768px) {
-  .carousel-item .col-md-8 {
-    display: flex;
-    justify-content: center;
-  }
-}
-
-
-.card-img-top-e {
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.h-100 {
-  border: none;
 }
 
 .card-title {
@@ -77,7 +68,7 @@ h1 {
 
 
 #dynamicContent {
-  min-height: 340px;
+  min-height: 320px;
   transition: all 0.3s ease;
   width: 100%;
 }
@@ -89,41 +80,6 @@ h1 {
   padding: 2rem;
   border-radius: 16px;
   display: flex;
-  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); */
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-}
-
-.header .email-info {
-  font-size: 0.9rem;
-  color: #555;
-  margin-bottom: 0.5rem;
-}
-
-.header .nav-buttons {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.header .nav-buttons button {
-  background-color: transparent;
-  border: 1px solid #ddd;
-  padding: 0.5rem 1rem;
-  border-radius: 50px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: background-color 0.3s;
-}
-
-.header .nav-buttons button:hover {
-  background-color: #e6e6e6;
 }
 
 .nav {
@@ -133,10 +89,6 @@ h1 {
 
 .cor-nav {
   color: #ffffff;
-}
-
-.sub-titulo {
-  color: #4A2F5C;
 }
 
 .nav-link {
@@ -167,125 +119,85 @@ h1 {
   height: auto;
 }
 
-.social-icons {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.social-icons img {
-  width: 30px;
-  cursor: pointer;
-}
-
-.cta-button {
-  margin-top: 1.5rem;
-}
-
-.cta-button button {
-  background-color: #000000;
-  color: white;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 50px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
 a {
   text-decoration: none;
   color: inherit;
 }
 
-.stack-icon {
-  width: 25px;
-  height: 25px;
-  transition: filter 0.3s;
-}
-
-.stack-icon:hover {
-  filter: grayscale(0);
-}
-
-.card-img-top {
-  height: 120px;
-  object-fit: contain;
-}
-
 .footer {
-  /* background-color: rgba(204, 211, 218, 0.178); */
   border-radius: 8px;
   padding: 10px 0;
 }
 
 .logos {
-  font-size: 10px;
   display: flex;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.9rem;
+  justify-content: flex-start;
+  margin-top: 0.5rem;
 }
 
 .logos p {
   background-color: #2d143aa9;
-  padding: 5px;
+  padding: 6px 12px;
   border-radius: 4px;
+  white-space: nowrap;
 }
 
-/* Responsivo - Tablets */
 @media (max-width: 768px) {
-  .container {
-    padding: 1.5rem;
+  .slide-eventos {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 
-  .content {
-    flex-direction: column;
+  .img-slide {
+    max-width: 80%;
+  }
+
+  .texto-slide {
+    text-align: center;
+    align-items: center;
+  }
+
+  .carousel-item .col-md-8 {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .img-slide {
+    max-width: 100%;
+  }
+
+  .texto-slide {
+    text-align: center;
+    align-items: center;
+  }
+
+  .header {
+    align-items: center;
     text-align: center;
   }
 
-  .text-section {
+  .header .nav-buttons {
+    justify-content: center;
     width: 100%;
   }
 
-  .image-section {
-    margin-top: 1rem;
-    text-align: center;
-  }
-
-  .nav {
-    justify-content: center;
-  }
-}
-
-/* Responsivo - Celulares */
-@media (max-width: 480px) {
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .email-info {
-    margin-bottom: 1rem;
-  }
-
-  .nav {
-    justify-content: center;
-    gap: 0.3rem;
-    font-size: 0.9rem;
-  }
-
-  .nav-link {
-    padding: 0.3rem 0.8rem;
-  }
-
-  .modal-content {
+  .container {
     padding: 1rem;
   }
 
-  .cta-button button {
-    width: 100%;
+  .logos {
+    justify-content: center;
+    font-size: 0.8rem;
+    gap: 6px;
   }
 
-  .image-section img {
-    max-width: 150px;
+  .logos p {
+    padding: 5px 10px;
   }
 }
